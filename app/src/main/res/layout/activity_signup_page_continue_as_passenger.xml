@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignupPageContinueAsPassenger"
+    android:background="@color/bg_color_grey">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="Passenger Details"
+        app:titleTextColor="@color/white">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+  android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:civ_border_width="0dp"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/selectImageV2"
+                    android:src="@drawable/placeholder_user" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Tap to upload \n Profile image"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <Spinner
+                    android:id="@+id/spinner_gender"
+                    style="@style/Widget.AppCompat.Spinner"
+                    android:layout_width="180dp"
+                    android:layout_height="40dp"
+
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/custom_spinner_bg"
+
+                    android:dropDownWidth="200dp"
+                    android:dropDownVerticalOffset="?attr/dropdownListPreferredItemHeight"
+                    android:padding="5dp"
+                    android:paddingRight="15dp"
+                    android:popupBackground="@color/text_color_grey"
+                    android:popupElevation="3dp"
+
+                    android:stateListAnimator="@drawable/custom_spinner_animator"
+                    android:textColor="@color/text_color_grey" />
+
+
+                <EditText
+                    android:id="@+id/designation_signup"
+                    android:layout_width="180dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/color_dark_grey_edittext"
+                    android:elevation="5dp"
+                    android:hint="Designation"
+
+                    android:padding="5dp"
+                    android:textColor="@color/text_color_grey"
+                    android:textColorHint="@color/text_color_grey" />
+
+
+                <EditText
+                    android:id="@+id/age_signup"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="3"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/color_dark_grey_edittext"
+                    android:elevation="5dp"
+                    android:hint="Age"
+                    android:padding="5dp"
+
+                    android:textColor="@color/text_color_grey"
+                    android:textColorHint="@color/text_color_grey" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/second_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="60dp"
+            android:elevation="5dp">
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:id="@+id/signupBtnContPassenger"
+                android:background="@drawable/proceed_btn_bg_green"
+                />
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:elevation="3dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+
+                app:srcCompat="@drawable/ic_arrow_forward_white_24dp"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

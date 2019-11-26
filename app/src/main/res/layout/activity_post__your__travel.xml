@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical"
+    tools:context=".AllPostsWork.PostYourTravel">
+
+    <androidx.appcompat.widget.Toolbar
+        android:background="?colorPrimary"
+        android:id="@+id/my_toolbar"
+        android:layout_height="?actionBarSize"
+        android:layout_width="fill_parent"
+        android:theme="@style/toolBarTheme"
+        android:title="Offer Lift"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:subtitleTextColor="#ffffffff" />
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        android:orientation="vertical"
+        android:weightSum="10.0">
+
+        <LinearLayout
+            android:id="@+id/offer_lift_layout"
+            android:layout_height="0.0px"
+            android:layout_weight="9.0"
+            android:layout_width="fill_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="5.0dip"
+            android:weightSum="9.7">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:text="I am"
+                android:textColor="@color/black_text_color"
+                android:textSize="16.0sp" />
+
+            <LinearLayout
+                android:layout_height="0.0px"
+                android:layout_weight="1.2"
+                android:layout_width="fill_parent"
+                android:orientation="horizontal"
+                android:paddingBottom="5.0dip">
+
+                <RelativeLayout
+                    android:id="@+id/rider_layout"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:layout_width="0.0px">
+
+                    <ImageButton
+                        android:background="@color/mdtp_white"
+                        android:clickable="false"
+                        android:duplicateParentState="true"
+                        android:id="@+id/rider_image"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_height="@dimen/book_ride_rideType_medium"
+                        android:layout_marginLeft="15.0dip"
+                        android:layout_width="@dimen/book_ride_rideType_medium"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/passenger_disabled" />
+
+                    <TextView
+                        android:clickable="false"
+                        android:duplicateParentState="true"
+                        android:gravity="center|left"
+                        android:id="@+id/rider_text"
+                        android:layout_centerVertical="true"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5.0dip"
+                        android:layout_toRightOf="@+id/rider_image"
+                        android:layout_width="wrap_content"
+                        android:text="Passenger"
+                        android:textColor="@color/disabledColorGray"
+                        android:textSize="@dimen/book_ride_text_medium" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/vehicle_layout"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:layout_width="0.0px">
+
+                    <ImageButton
+                        android:background="@color/mdtp_white"
+                        android:clickable="false"
+                        android:duplicateParentState="true"
+                        android:id="@+id/vehicle_image"
+                        android:layout_centerVertical="true"
+                        android:layout_height="@dimen/book_ride_rideType_medium"
+                        android:layout_width="@dimen/book_ride_rideType_medium"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/vehicle_enabled" />
+
+                    <TextView
+                        android:clickable="false"
+                        android:duplicateParentState="true"
+                        android:gravity="center|left"
+                        android:id="@+id/vehicle_text"
+                        android:layout_centerInParent="true"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5.0dip"
+                        android:layout_toRightOf="@+id/vehicle_image"
+                        android:layout_width="wrap_content"
+                        android:maxLines="1"
+                        android:text="Driver"
+                        android:textColor="@color/black_text_color"
+                        android:textSize="@dimen/book_ride_text_medium" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="@color/mdtp_red"
+                android:layout_height="2.0dip"
+                android:layout_width="fill_parent"
+                android:orientation="vertical" />
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0.0px"
+                android:layout_weight="2.5"
+                android:orientation="horizontal"
+                android:weightSum="3.0">
+
+                <ImageView
+                    android:id="@+id/route_arrow"
+                    android:layout_width="0.0px"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="left"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/route_arrow" />
+
+                <LinearLayout
+                    android:layout_width="0.0px"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2.8"
+                    android:orientation="vertical"
+                    android:paddingLeft="5.0dip"
+                    android:weightSum="2.0">
+
+                    <LinearLayout
+                        android:id="@+id/start_point_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.0px"
+                        android:layout_weight="1.0"
+                        android:orientation="vertical"
+                        android:weightSum="3.0">
+
+                        <TextView
+                            android:id="@+id/startPointTx"
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.0px"
+                            android:layout_weight="3.0"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:maxLines="2"
+                            android:text="Start Point"
+                            android:textColor="#ffa9a9a9"
+                            android:textSize="@dimen/book_ride_text_medium"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/offer_lift_start_name"
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.0px"
+                            android:layout_weight="1.7"
+                            android:ellipsize="end"
+                            android:gravity="bottom"
+                            android:maxLines="2"
+                            android:scrollHorizontally="true"
+                            android:textColor="#ff000000"
+                            android:textSize="14.0sp"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/offer_lift_start_address"
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.0px"
+                            android:layout_weight="1.3"
+                            android:gravity="top"
+                            android:text="Starting Point details"
+                            android:textColor="#ffa9a9a9"
+                            android:textSize="14.0sp"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0dip"
+                        android:background="@color/mdtp_red"
+                        android:orientation="vertical" />
+
+                    <LinearLayout
+                        android:id="@+id/end_point_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.0px"
+                        android:layout_weight="1.0"
+                        android:orientation="vertical"
+                        android:weightSum="3.0">
+
+                        <TextView
+                            android:id="@+id/endPointTx"
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.0px"
+                            android:layout_weight="3.0"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:text="End Point"
+                            android:textColor="#ffa9a9a9"
+                            android:textSize="@dimen/book_ride_text_medium" />
+
+                        <TextView
+                            android:id="@+id/offer_lift_end_name"
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.0px"
+                            android:layout_weight="1.7"
+                            android:ellipsize="end"
+                            android:gravity="bottom"
+                            android:maxLines="2"
+                            android:paddingTop="2.0dip"
+                            android:scrollHorizontally="true"
+                            android:textColor="#ff000000"
+                            android:textSize="14.0sp"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/offer_lift_end_address"
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.0px"
+                            android:layout_weight="1.3"
+                            android:gravity="top"
+                            android:textColor="#ffa9a9a9"
+                            android:textSize="14.0sp"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/mdtp_red"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:id="@+id/days_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:orientation="vertical">
+
+                <Switch
+                    android:id="@+id/regularTripsw"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_weight="1.0"
+                    android:gravity="center|left"
+                    android:paddingRight="5.0dip"
+                    android:switchMinWidth="0.0dip"
+                    android:text="Regular Trip"
+                    android:textSize="@dimen/book_ride_text_medium"
+                    android:thumb="@drawable/switch_thumb"
+                    android:thumbTextPadding="10.0dip"
+                    android:track="@drawable/switch_track" />
+
+                <LinearLayout
+                    android:id="@+id/offerdaysLayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ToggleButton
+                        android:id="@+id/Sat"
+                        android:layout_width="@dimen/book_ride_day_medium"
+                        android:layout_height="@dimen/book_ride_day_medium"
+                        android:layout_marginRight="2.0dip"
+                        android:background="@drawable/daycheckbox_background"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textColor="#ffa9a9a9"
+                        android:textOff="Sat"
+                        android:textOn="Sat"
+                        android:textSize="@dimen/book_ride_text_medium" />
+
+                    <ToggleButton
+                        android:id="@+id/Sun"
+                        android:layout_width="@dimen/book_ride_day_medium"
+                        android:layout_height="@dimen/book_ride_day_medium"
+                        android:layout_marginRight="2.0dip"
+                        android:background="@drawable/daycheckbox_background"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textColor="#ffa9a9a9"
+                        android:textOff="Sun"
+                        android:textOn="Sun"
+                        android:textSize="@dimen/book_ride_text_medium" />
+
+                    <ToggleButton
+                        android:id="@+id/Mon"
+                        android:layout_width="@dimen/book_ride_day_medium"
+                        android:layout_height="@dimen/book_ride_day_medium"
+                        android:layout_marginRight="2.0dip"
+                        android:background="@drawable/daycheckbox_background"
+                        android:checked="true"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textColor="#ffffffff"
+                        android:textOff="Mon"
+                        android:textOn="Mon"
+                        android:textSize="@dimen/book_ride_text_medium" />
+
+                    <ToggleButton
+                        android:id="@+id/Tue"
+                        android:layout_width="@dimen/book_ride_day_medium"
+                        android:layout_height="@dimen/book_ride_day_medium"
+                        android:layout_marginRight="2.0dip"
+                        android:background="@drawable/daycheckbox_background"
+                        android:checked="true"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textColor="#ffffffff"
+                        android:textOff="Tue"
+                        android:textOn="Tue"
+                        android:textSize="@dimen/book_ride_text_medium" />
+
+                    <ToggleButton
+                        android:id="@+id/Wed"
+                        android:layout_width="@dimen/book_ride_day_medium"
+                        android:layout_height="@dimen/book_ride_day_medium"
+                        android:layout_marginRight="2.0dip"
+                        android:background="@drawable/daycheckbox_background"
+                        android:checked="true"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textColor="#ffffffff"
+                        android:textOff="Wed"
+                        android:textOn="Wed"
+                        android:textSize="@dimen/book_ride_text_medium" />
+
+                    <ToggleButton
+                        android:id="@+id/Thu"
+                        android:layout_width="@dimen/book_ride_day_medium"
+                        android:layout_height="@dimen/book_ride_day_medium"
+                        android:layout_marginRight="2.0dip"
+                        android:background="@drawable/daycheckbox_background"
+                        android:checked="true"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textColor="#ffffffff"
+                        android:textOff="Thu"
+                        android:textOn="Thu"
+                        android:textSize="@dimen/book_ride_text_medium" />
+
+                    <ToggleButton
+                        android:id="@+id/Fri"
+                        android:layout_width="@dimen/book_ride_day_medium"
+                        android:layout_height="@dimen/book_ride_day_medium"
+                        android:layout_marginRight="2.0dip"
+                        android:background="@drawable/daycheckbox_background"
+                        android:checked="true"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textColor="#ffffffff"
+                        android:textOff="Fri"
+                        android:textOn="Fri"
+                        android:textSize="@dimen/book_ride_text_medium" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dip"
+                    android:background="@color/mdtp_red"
+                    android:orientation="vertical" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/startDateTimeLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0px"
+                android:layout_weight="1.0"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/offerdeparturedate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.0px"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:text="Start Date and Time"
+                    android:textColor="@color/gray_text_color"
+                    android:textSize="@dimen/book_ride_text_medium" />
+
+                <TextView
+                    android:id="@+id/offerdeparturedate_header"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.0px"
+                    android:layout_weight="1.0"
+                    android:gravity="bottom"
+                    android:textColor="@color/gray_text_color"
+                    android:textSize="@dimen/book_ride_text_medium"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/offerdeparturedate_detail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.0px"
+                    android:layout_weight="1.0"
+                    android:gravity="top"
+                    android:textColor="#ff000000"
+                    android:textSize="@dimen/book_ride_text_medium"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/mdtp_red"
+                android:orientation="vertical" />
+
+            <Switch
+                android:id="@+id/offerRoundTripSw"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0px"
+                android:layout_weight="1.0"
+                android:gravity="center|left"
+                android:paddingRight="5.0dip"
+                android:text="Round Trip"
+                android:textSize="@dimen/book_ride_text_medium"
+                android:thumb="@drawable/switch_thumb"
+                android:track="@drawable/switch_track"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/mdtp_red"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:id="@+id/return_time_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0px"
+                android:layout_weight="1.0"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/offerReturnTimetx"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:hint="Return Date and Time"
+                    android:textColor="@color/gray_text_color"
+                    android:textSize="@dimen/book_ride_text_medium" />
+
+                <TextView
+                    android:id="@+id/offerreturndate_header"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.0px"
+                    android:layout_weight="1.0"
+                    android:gravity="bottom"
+                    android:textColor="@color/gray_text_color"
+                    android:textSize="@dimen/book_ride_text_medium"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/offerreturndate_detail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.0px"
+                    android:layout_weight="1.0"
+                    android:gravity="top"
+                    android:textColor="#ff000000"
+                    android:textSize="@dimen/book_ride_text_medium"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0dip"
+                    android:background="@color/mdtp_red"
+                    android:orientation="vertical" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/offerLiftConfirm"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0px"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="10.0dip"
+                android:layout_weight="1.0"
+                android:background="@drawable/mainactivity_buttondraw"
+
+                android:gravity="center"
+                android:padding="2.0dip"
+                android:text="Offer Ride"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/book_ride_text_medium" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

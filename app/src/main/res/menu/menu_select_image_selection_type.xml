@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/select_from_gallary"
+        android:title="Select From Gallery" />
+    <item
+        android:id="@+id/take_pic"
+        android:title="Take Picture"/>
+
+</menu>

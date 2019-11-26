@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="?actionBarSize"
+        android:background="?colorPrimary"
+        android:theme="@style/toolBarTheme"
+        android:title="Offer Lift"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:subtitleTextColor="#ffffffff">
+
+        <TextView
+            android:id="@+id/inviteFriendsId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:layout_marginRight="5.0dip"
+            android:text="Invite Friends"
+            android:textColor="@color/myapp_white_color"
+            android:textSize="18.0sp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:weightSum="10.0">
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="9.0"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10.0dip">
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.mikhaellopez.circularimageview.CircularImageView
+                            android:id="@+id/offer_details_image"
+                            android:layout_width="80.0dip"
+                            android:layout_height="80.0dip"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/placeholder_user" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/offer_details_name"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="bottom|center"
+                        android:maxLines="1"
+                        android:paddingBottom="0.0dip"
+                        android:text="User Name"
+                        android:textColor="@color/black_text_color"
+                        android:textSize="18.0sp" />
+
+                    <TextView
+                        android:id="@+id/offer_type_message"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center|top"
+                        android:maxLines="1"
+                        android:paddingTop="0.0dip"
+                        android:text="is offering a ride"
+                        android:textColor="@color/gray_text_color"
+                        android:textSize="18.0sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/watch_video_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible">
+
+                        <Button
+                            android:id="@+id/send_request_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="5.0dip"
+                            android:layout_marginBottom="5.0dip"
+                            android:background="@drawable/mainactivity_buttondraw"
+                            android:maxLines="2"
+                            android:text="Send Request"
+                            android:textAllCaps="false"
+                            android:textColor="#ffffffff"
+                            android:textSize="15.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/contact_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible">
+
+                        <Button
+                            android:id="@+id/call_bt"
+                            android:layout_width="60.0dip"
+                            android:layout_height="40.0dip"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="5.0dip"
+                            android:layout_marginBottom="5.0dip"
+                            android:background="@drawable/mainactivity_buttondraw"
+                            android:text="Call"
+                            android:textAllCaps="false"
+                            android:textColor="#ffffffff"
+                            android:textSize="12.0sp"
+                            android:visibility="visible" />
+
+                        <Button
+                            android:id="@+id/start_chat_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="5.0dip"
+                            android:layout_marginBottom="5.0dip"
+                            android:background="@drawable/mainactivity_buttondraw"
+                            android:text="Start Chat"
+                            android:textAllCaps="false"
+                            android:textColor="#ffffffff"
+                            android:textSize="15.0sp" />
+
+                        <Button
+                            android:id="@+id/sms_bt"
+                            android:layout_width="60.0dip"
+                            android:layout_height="40.0dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="5.0dip"
+                            android:layout_marginBottom="5.0dip"
+                            android:background="@drawable/mainactivity_buttondraw"
+                            android:text="SMS"
+                            android:textAllCaps="false"
+                            android:textColor="#ffffffff"
+                            android:textSize="12.0sp"
+                            android:visibility="visible" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0dip"
+                        android:background="@color/mdtp_red"
+                        android:orientation="vertical" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5.0dip"
+                        android:layout_marginBottom="5.0dip"
+                        android:orientation="horizontal"
+                        android:weightSum="3.5">
+
+                        <ImageView
+                            android:id="@+id/route_arrow"
+                            android:layout_width="0.0px"
+                            android:layout_height="120.0dip"
+                            android:layout_gravity="left"
+                            android:layout_weight="0.2"
+                            android:src="@drawable/route_arrow" />
+
+                        <LinearLayout
+                            android:layout_width="0.0px"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="2.8"
+                            android:orientation="vertical"
+                            android:weightSum="2.0">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="0.0px"
+                                android:layout_gravity="center|left|top"
+                                android:layout_weight="1.0"
+                                android:orientation="vertical"
+                                android:weightSum="3.0">
+
+                                <TextView
+                                    android:id="@+id/offer_details_start_name"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="0.0px"
+                                    android:layout_weight="1.3"
+                                    android:ellipsize="end"
+                                    android:gravity="bottom|center|left"
+                                    android:maxLines="1"
+                                    android:text="Starting Point"
+                                    android:textColor="#ff000000"
+                                    android:textSize="15.0sp" />
+
+                                <TextView
+                                    android:id="@+id/offer_details_start_address"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0.0px"
+                                    android:layout_weight="1.7"
+                                    android:gravity="center|left|top"
+                                    android:text="Starting Point details"
+                                    android:textColor="#ffa9a9a9"
+                                    android:textSize="15.0sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="0.0px"
+                                android:layout_weight="1.0"
+                                android:orientation="vertical"
+                                android:weightSum="3.0">
+
+                                <TextView
+                                    android:id="@+id/offer_details_end_name"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="0.0px"
+                                    android:layout_weight="1.3"
+                                    android:ellipsize="end"
+                                    android:gravity="bottom"
+                                    android:maxLines="1"
+                                    android:text="Destination"
+                                    android:textColor="#ff000000"
+                                    android:textSize="15.0sp" />
+
+                                <TextView
+                                    android:id="@+id/offer_details_end_address"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="0.0px"
+                                    android:layout_weight="1.7"
+                                    android:gravity="center|left|top"
+                                    android:text="Destination details"
+                                    android:textColor="#ffa9a9a9"
+                                    android:textSize="15.0sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0.0px"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="0.5"
+                            android:gravity="center">
+
+                            <Button
+                                android:id="@+id/check_route_bt"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5.0dip"
+                                android:layout_marginBottom="5.0dip"
+                                android:background="@drawable/gray_button_drawable"
+                                android:padding="0.0dip"
+                                android:text="Route"
+                                android:textAllCaps="false"
+                                android:textColor="#ffffffff"
+                                android:textSize="12.0sp"
+                                android:visibility="visible" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0dip"
+                        android:layout_gravity="top"
+                        android:background="@color/mdtp_red" />
+
+                    <LinearLayout
+                        android:id="@+id/offer_detailstimeLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5.0dip"
+                        android:layout_marginBottom="5.0dip"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/start_time_layout"
+                            android:layout_width="0.0px"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="0.9"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/start_time_header"
+                                android:layout_width="fill_parent"
+                                android:layout_height="0.0px"
+                                android:layout_weight="1.0"
+                                android:gravity="bottom|center"
+                                android:text="Start Time"
+                                android:textColor="@color/gray_text_color"
+                                android:textSize="16.0sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/start_time_details_date"
+                                android:layout_width="fill_parent"
+                                android:layout_height="0.0px"
+                                android:layout_weight="1.0"
+                                android:gravity="center|top"
+                                android:text="start time date"
+                                android:textColor="@color/black_text_color"
+                                android:textSize="14.0sp" />
+
+                            <TextView
+                                android:id="@+id/start_time_details_time"
+                                android:layout_width="fill_parent"
+                                android:layout_height="0.0px"
+                                android:layout_weight="1.0"
+                                android:gravity="center|top"
+                                android:text="Start Time"
+                                android:textColor="@color/black_text_color"
+                                android:textSize="14.0sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/time_divider_line"
+                            android:layout_width="1.0dip"
+                            android:layout_height="fill_parent"
+                            android:layout_margin="5.0dip"
+                            android:background="@color/mdtp_red"
+                            android:orientation="vertical" />
+
+                        <LinearLayout
+                            android:id="@+id/return_time_layout"
+                            android:layout_width="0.0px"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1.1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/return_time_header"
+                                android:layout_width="fill_parent"
+                                android:layout_height="0.0px"
+                                android:layout_weight="1.0"
+                                android:gravity="bottom|center"
+                                android:text="Return Time"
+                                android:textColor="@color/gray_text_color"
+                                android:textSize="16.0sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/return_time_details_date"
+                                android:layout_width="fill_parent"
+                                android:layout_height="0.0px"
+                                android:layout_weight="1.0"
+                                android:gravity="center|top"
+                                android:text="return_time_date"
+                                android:textColor="@color/black_text_color"
+                                android:textSize="14.0sp" />
+
+                            <TextView
+                                android:id="@+id/return_time_details_time"
+                                android:layout_width="fill_parent"
+                                android:layout_height="0.0px"
+                                android:layout_weight="1.0"
+                                android:gravity="center|top"
+                                android:text="Return Time"
+                                android:textColor="@color/black_text_color"
+                                android:textSize="14.0sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0dip"
+                        android:layout_gravity="top"
+                        android:background="@color/mdtp_red" />
+
+                    <LinearLayout
+                        android:id="@+id/offerdetailsdaysLayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5.0dip"
+                        android:layout_marginBottom="5.0dip"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:paddingBottom="5.0dip"
+                            android:text="Regular Trip"
+                            android:textColor="#ffa9a9a9"
+                            android:textSize="15.0dip"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+
+
+                            <TextView
+                                android:id="@+id/offer_details_mon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/daycircle_checked"
+                                android:gravity="center"
+                                android:text="Mon"
+                                android:textColor="#ffffffff"
+                                android:textSize="@dimen/days_text_size_offer_details"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/offer_details_tue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/daycircle_checked"
+                                android:gravity="center"
+                                android:text="Tue"
+                                android:textColor="#ffffffff"
+                                android:textSize="@dimen/days_text_size_offer_details"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/offer_details_wed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/daycircle_checked"
+                                android:gravity="center"
+                                android:text="Wed"
+                                android:textColor="#ffffffff"
+                                android:textSize="@dimen/days_text_size_offer_details"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/offer_details_thu"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/daycircle_checked"
+                                android:gravity="center"
+                                android:text="Thu"
+                                android:textColor="#ffffffff"
+                                android:textSize="@dimen/days_text_size_offer_details"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/offer_details_fri"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/daycircle_checked"
+                                android:gravity="center"
+                                android:text="Fri"
+                                android:textColor="#ffffffff"
+                                android:textSize="@dimen/days_text_size_offer_details"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/offer_details_sat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/daycircle_checked"
+                                android:gravity="center"
+                                android:text="Sat"
+                                android:textColor="#ffffffff"
+                                android:textSize="@dimen/days_text_size_offer_details"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/offer_details_sun"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/daycircle_checked"
+                                android:gravity="center"
+                                android:text="Sun"
+                                android:textColor="#ffffffff"
+                                android:textSize="@dimen/days_text_size_offer_details"
+                                android:visibility="gone" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/offerDetails_daysLine"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0dip"
+                        android:background="@color/mdtp_red"
+                        android:orientation="vertical"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:id="@+id/vehicle_type_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5.0dip"
+                        android:layout_marginBottom="5.0dip"
+                        android:orientation="vertical"
+                        android:weightSum="2.0">
+
+                        <TextView
+                            android:id="@+id/vehicleTypeTx"
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.0px"
+                            android:layout_weight="1.0"
+                            android:gravity="bottom"
+                            android:text="Vehicle Type"
+                            android:textColor="@color/gray_text_color"
+                            android:textSize="15.0sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/vehicleTypeDetailTx"
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.0px"
+                            android:layout_weight="1.0"
+                            android:text="Car"
+                            android:textColor="@color/black_text_color"
+                            android:textSize="15.0sp" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="1.0dip"
+                            android:layout_gravity="top"
+                            android:background="@color/mdtp_red" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/fare_amount_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5.0dip"
+                        android:layout_marginBottom="5.0dip"
+                        android:orientation="vertical"
+                        android:visibility="visible"
+                        android:weightSum="2.0">
+
+                        <TextView
+                            android:id="@+id/Fare_amount_header"
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.0px"
+                            android:layout_weight="1.0"
+                            android:gravity="bottom"
+                            android:text="Contribution Per Passenger (One Side)"
+                            android:textColor="@color/gray_text_color"
+                            android:textSize="15.0sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/fare_amount_Details"
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.0px"
+                            android:layout_weight="1.0"
+                            android:gravity="top"
+                            android:text="30"
+                            android:textColor="@color/black_text_color"
+                            android:textSize="15.0sp" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="1.0dip"
+                            android:layout_gravity="top"
+                            android:background="@color/mdtp_red" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/mobile_details_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:id="@+id/mobile_number_layout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerInParent="true"
+                                android:layout_marginTop="5.0dip"
+                                android:layout_marginBottom="5.0dip"
+                                android:orientation="vertical"
+                                android:weightSum="2.0">
+
+                                <TextView
+                                    android:id="@+id/mobileHeaderTx"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="0.0px"
+                                    android:layout_weight="1.0"
+                                    android:gravity="bottom"
+                                    android:text="Mobile Number"
+                                    android:textColor="@color/gray_text_color"
+                                    android:textSize="15.0sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/mobileDetailsTx"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="0.0px"
+                                    android:layout_weight="1.0"
+                                    android:text="Mobile Number Detail"
+                                    android:textColor="@color/black_text_color"
+                                    android:textSize="15.0sp" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="1.0dip"
+                            android:layout_gravity="top"
+                            android:background="@color/mdtp_red" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/offer_message_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5.0dip"
+                        android:layout_marginBottom="5.0dip"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="top"
+                            android:text="Message"
+                            android:textColor="@color/gray_text_color"
+                            android:textSize="16.0sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/offermessage_detailsTx"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="top"
+                            android:maxLength="150"
+                            android:paddingLeft="5.0dip"
+                            android:text="Offer Message"
+                            android:textColor="@color/black_text_color"
+                            android:textSize="16.0sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+   
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:background="#ffffffff"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context=".AllPostsWork.PostTravelStep2ForDriver">
+
+    <androidx.appcompat.widget.Toolbar
+
+        android:id="@+id/my_toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="?actionBarSize"
+        android:background="?colorPrimary"
+        android:theme="@style/toolBarTheme"
+        android:title="Offer Lift"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:subtitleTextColor="#ffffffff" />
+
+    <LinearLayout
+        android:id="@+id/offer_lift_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:paddingTop="5.0dip"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:weightSum="10.3">
+
+        <LinearLayout
+            android:id="@+id/vehicleType_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0px"
+            android:visibility="gone"
+            android:layout_weight="1.0"
+            android:orientation="horizontal"
+            android:paddingLeft="5.0dip"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:weightSum="1.0">
+
+            <TextView
+                android:layout_width="0.0px"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.4"
+                android:gravity="center_vertical"
+                android:text="Vehicle Type"
+                android:textColor="#ff000000"
+                android:textSize="@dimen/book_ride_text_medium" />
+
+            <Spinner
+                android:id="@+id/vehicletype_spinner"
+                android:layout_width="0.0px"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.6"
+                android:gravity="center_vertical" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/vehicle_type_line"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:background="@color/mdtp_red"
+            android:orientation="vertical"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/fare_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0px"
+            android:layout_weight="2.0"
+            android:orientation="horizontal"
+            android:weightSum="1.0">
+
+            <LinearLayout
+                android:layout_width="0.0px"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.9"
+                android:orientation="vertical"
+                android:weightSum="2.0">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.0px"
+                    android:layout_weight="0.7"
+                    android:gravity="center|left"
+                    android:paddingLeft="5.0dip"
+                    android:text="Contribution Per Passenger (One Side)"
+                    android:textColor="#ff000000"
+                    android:textSize="15.0sp" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.0px"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:weightSum="2.0">
+
+                    <Button
+                        android:id="@+id/negative_increment"
+                        android:layout_width="0.0px"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="2.0dip"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_marginBottom="2.0dip"
+                        android:layout_weight="0.3"
+                        android:background="@drawable/mainactivity_buttondraw"
+                        android:enabled="true"
+                        android:gravity="center"
+                        android:padding="0.0dip"
+                        android:text="-"
+                        android:textAllCaps="false"
+                        android:textColor="@color/myapp_white_color"
+                        android:textSize="20.0dip"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/fareAmountEt"
+                        android:layout_width="0.0px"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal"
+                        android:maxLength="12"
+                        android:maxLines="1"
+                        android:text="0"
+                        android:textColor="#ff000000"
+                        android:textSize="@dimen/book_ride_text_medium" />
+
+                    <Button
+                        android:id="@+id/positive_increment"
+                        android:layout_width="0.0px"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="2.0dip"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_marginBottom="2.0dip"
+                        android:layout_weight="0.3"
+                        android:background="@drawable/mainactivity_buttondraw"
+                        android:enabled="true"
+                        android:gravity="center"
+                        android:padding="0.0dip"
+                        android:text="+"
+                        android:textAllCaps="false"
+                        android:textColor="@color/myapp_white_color"
+                        android:textSize="20.0dip"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/currency_spinner"
+                        android:layout_width="0.0px"
+                        android:layout_height="fill_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_weight="0.25"
+                        android:gravity="center_vertical"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fare_info_layout"
+                android:layout_width="0.0px"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center|right|top"
+                android:layout_weight="0.1"
+                android:gravity="center|right|top"
+                android:orientation="vertical"
+                android:weightSum="1.0">
+
+                <ImageView xmlns:n3="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/offer_details_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0.0px"
+                    android:layout_centerInParent="true"
+                    android:layout_weight="0.5"
+                    android:paddingRight="5.0dip"
+                    n3:srcCompat="@drawable/fare_info" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/fare_"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:background="@color/mdtp_red"
+            android:orientation="vertical" />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0.0px"
+            android:layout_weight="2.0"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:weightSum="3.0">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="0.0px"
+                android:layout_weight="0.8"
+                android:gravity="top"
+                android:text="Message"
+                android:textColor="@color/black"
+                android:textSize="@dimen/book_ride_text_medium" />
+
+            <EditText
+                android:id="@+id/message_detailsTx"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0px"
+                android:layout_weight="2.2"
+                android:gravity="center|left|top"
+                android:hint="Offer Message"
+                android:maxLength="150"
+                android:paddingLeft="5.0dip"
+                android:paddingTop="0.0dip"
+                android:textColor="@color/gray_text_color"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0.0px"
+            android:layout_weight="1.6"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:weightSum="3.0">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="0.0px"
+                android:layout_weight="0.6"
+                android:gravity="top"
+                android:text="Number Of Passengers"
+                android:textColor="@color/black"
+                android:textSize="@dimen/book_ride_text_medium" />
+
+            <EditText
+                android:layout_marginTop="10dp"
+                android:id="@+id/no_of_passengersEdtx"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0px"
+                android:layout_weight="1.6"
+                android:gravity="center|left|top"
+                android:inputType="number"
+                android:maxLength="150"
+                android:paddingLeft="5.0dip"
+                android:paddingTop="0.0dip"
+                android:textColor="@color/gray_text_color"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fare_amount_line"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:background="@color/mdtp_red"
+            android:orientation="vertical" />
+
+
+        <Button
+            android:id="@+id/offerLiftConfirmbtn"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0px"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="10.0dip"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="10.0dip"
+            android:layout_weight="1.2"
+            android:background="@drawable/mainactivity_buttondraw"
+            android:enabled="true"
+            android:text="Confirm Ride Offer"
+            android:textAllCaps="false"
+            android:textColor="@color/myapp_white_color"
+            android:textSize="15sp"
+            android:visibility="visible" />
+
+
+    </LinearLayout>
+</LinearLayout>

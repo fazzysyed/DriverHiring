@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector>
+    <item n1:state_enabled="false"
+      xmlns:n1="http://schemas.android.com/apk/res/android">
+        <shape>
+            <solid n1:color="@color/myapp_green_color" />
+            <stroke n1:width="1.0dip" n1:color="@color/myapp_green_color" />
+            <corners n1:radius="6.0dip" />
+            <padding n1:left="10.0dip" n1:top="10.0dip" n1:right="10.0dip" n1:bottom="10.0dip" />
+        </shape>
+    </item>
+    <item n2:state_pressed="true"
+      xmlns:n2="http://schemas.android.com/apk/res/android">
+        <shape>
+            <solid n2:color="#ffa0eca0" />
+            <stroke n2:width="1.0dip" n2:color="#ffa0eca0" />
+            <corners n2:radius="6.0dip" />
+            <padding n2:left="10.0dip" n2:top="10.0dip" n2:right="10.0dip" n2:bottom="10.0dip" />
+        </shape>
+    </item>
+    <item n3:textColor="@color/myapp_white_color" n3:state_enabled="true"
+      xmlns:n3="http://schemas.android.com/apk/res/android">
+        <shape>
+            <gradient n3:startColor="@color/gray_text_color" n3:endColor="@color/gray_text_color" n3:angle="270.0" />
+            <stroke n3:width="1.0dip" n3:color="@color/myapp_green_color" />
+            <corners n3:radius="6.0dip" />
+            <padding n3:left="10.0dip" n3:top="10.0dip" n3:right="10.0dip" n3:bottom="10.0dip" />
+        </shape>
+    </item>
+</selector>

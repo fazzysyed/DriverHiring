@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/profileMenu"
+            android:icon="@drawable/ic_person_new"
+            android:title="My Profile" />
+        <item
+            android:id="@+id/findserviceMenu"
+            android:icon="@drawable/ic_post_travel"
+            android:title="Post Your Travel" />
+        <item
+            android:id="@+id/messangerMenue"
+            android:icon="@drawable/ic_message_black_24dp"
+            android:title="Messanger" />
+        <item
+            android:id="@+id/requests"
+            android:icon="@drawable/ic_request_list_black_24dp"
+            android:title="Requests" />
+        <item
+            android:id="@+id/logoutMenu"
+            android:icon="@drawable/ic_logout_black_24dp"
+            android:title="Logout" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_shareNav"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/menu_share" />
+            <item
+                android:id="@+id/nav_sendNav"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/menu_send" />
+
+            <item
+                android:id="@+id/contactMenu"
+                android:icon="@drawable/ic_person_black_24dp"
+                android:title="Contact Us" />
+        </menu>
+    </item>
+
+</menu>

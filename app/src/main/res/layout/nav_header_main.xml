@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_head_main"
+    android:layout_width="match_parent"
+    android:layout_height="220dp"
+    android:background="@color/bg_color_grey"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/ImageViewNav"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        app:civ_border_width="2dp"
+        app:civ_border_color="@color/white"
+        app:srcCompat="@drawable/ic_launcher_background"/>
+
+
+    <TextView
+        android:id="@+id/UsernameTxtNav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="usernameheader"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/PhoneNumberTxtNav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="phone_number"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp">
+
+        <ImageView
+            android:id="@+id/dclose"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:paddingLeft="40dp"
+
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

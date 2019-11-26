@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/login_as_driver"
+        android:title="Login As Driver" />
+    <item
+        android:id="@+id/login_as_passenger"
+        android:title="Login As Passenger"/>
+
+</menu>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+<item android:start="@dimen/activity_vertical_margin"
+    android:state_checked="true">
+
+    <shape android:shape="rectangle">
+
+        <solid android:color="@color/colorLightBluesh"/>
+
+        <corners android:bottomRightRadius="30dp"
+                  android:topRightRadius="30dp"/>
+
+    </shape>
+</item>
+
+    <item
+android:state_checked="true"
+        android:right="282dp"
+       >
+
+        <shape android:shape="rectangle">
+            <padding android:left="10px"/>
+            <solid android:color="@color/colorWhite"/>
+        </shape>
+
+
+
+
+    </item>
+</layer-list>
